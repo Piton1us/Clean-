@@ -87,7 +87,10 @@ nav button {
 
 .middle-font-size {
   font-size: 30px;
-  line-height: 10px;
+}
+
+.high-font-size {
+  font-size: 40px;
 }
 
 .blue-btn {
@@ -169,4 +172,44 @@ nav button {
 }
 .indicator-second-box div {
   margin: 40px 40px;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  background-color: #F5F8FF;
+  color: #3D4F9F;
+}
+.start .how-start {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 50px;
+  padding: 0 20px;
+  height: 400px;
+}
+.start .how-start .how-start-box {
+  margin-bottom: 29px;
+}
+.start .how-start img {
+  width: 460px;
+  height: 360px;
+}
+
+.white-button {
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  color: #8D96BD;
+}
+.white-button:hover {
+  transition: ease-in 0.2s;
+  background-color: #D2E1FF;
+  cursor: pointer;
+  color: #3A79FF;
 }/*# sourceMappingURL=style.css.map */
