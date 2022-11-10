@@ -352,7 +352,7 @@ footer{
 @media(max-width:450px){
 
     section{
-        min-width: 670px;
+        min-width: 690px;
     }
 
     header{
@@ -409,6 +409,18 @@ footer{
         height: 600px!important;
         padding-right: 40px!important;
         // margin-bottom: 100px;
+    }
+
+    footer{
+        width: 690px;
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .sign-up{
+        padding-right: 20px;
     }
 }
 
