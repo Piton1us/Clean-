@@ -6,6 +6,7 @@ $second-color: #3D4F9F;
 
 body{
     max-width: $maxWidth;
+    min-width: 450px;
     font-family: 'Quicksand', sans-serif;
     justify-content: center;
     margin: auto !important;
@@ -346,3 +347,69 @@ footer{
     margin: 30px 0 0 190px;
     color: #AEB8D0;
 }
+
+
+@media(max-width:450px){
+
+    section{
+        min-width: 650px;
+    }
+
+    header{
+        display:none;
+    }
+
+    .productivity{
+        img{
+            // width: 100%;
+            width: 650px;
+            height: 400px;
+        }
+    }
+
+    .sponsors{
+        justify-content: flex-start;
+        height: 60px;
+        img{
+            
+            
+            margin-left: 10px;
+        }
+    }
+
+    .mobileApp{
+        width: 620px;
+        padding: 30px 0;
+        margin-top: 60px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .about-app{
+        flex-wrap: wrap;
+        margin:40px 0 40px 0;
+        background-size:auto;
+        .app-box{
+            flex-wrap: wrap;
+            
+             grid-template-columns:130px 30px 130px 50px 130px 30px 130px;
+            
+            .media{
+                margin-left: 20px;
+            }
+        }
+
+        .buttons{
+            width: 400px;
+        }
+    }
+
+    .how-start{
+        height: 600px!important;
+        padding-right: 40px!important;
+        // margin-bottom: 100px;
+    }
+}
+
+
