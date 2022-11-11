@@ -40,77 +40,126 @@ nav a {
 nav a:hover {
   color: #5E81FE;
 }
-nav button {
-  background-color: #D2E1FF;
-  cursor: pointer;
-  color: #3A79FF;
-  border: none;
-  border-radius: 5px;
-  width: 113px;
-  height: 43px;
-  margin-bottom: 5px;
+nav .btn:link,
+nav .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
 }
-
-.productivity img {
+nav .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+nav .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+nav .btn-white {
+  background-color: #D2E1FF;
+  color: #3A79FF;
+}
+nav .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+nav .btn-white::after {
+  background-color: #fff;
+}
+nav .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+nav .btn-animated {
+  -webkit-animation: moveInBottom 5s ease-out;
+          animation: moveInBottom 5s ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+nav .productivity img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   min-width: 40%;
 }
-
-.sponsors {
+nav .sponsors {
   display: flex;
   justify-content: space-around;
   height: 145px;
   align-items: center;
 }
-.sponsors img {
+nav .sponsors img {
   width: 116px;
   height: 27px;
 }
-
-.mobileApp {
+nav .mobileApp {
   background-color: #F5F8FF;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: #3D4F9F;
 }
-.mobileApp img {
+nav .mobileApp img {
   margin-top: 120px;
   width: 100%;
 }
-.mobileApp .little-margin {
+nav .mobileApp .little-margin {
   margin-left: 90px;
 }
-.mobileApp .little-margin div {
+nav .mobileApp .little-margin div {
   margin-top: 70px;
 }
-
-.middle-font-size {
+nav .middle-font-size {
   font-size: 30px;
 }
-
-.high-font-size {
+nav .high-font-size {
   font-size: 40px;
 }
-
-.blue-btn {
+nav .blue-btn {
   background-color: #4C85FF;
   color: #fff;
 }
-.blue-btn:hover {
+nav .blue-btn:hover {
   transition: ease-in-out 0.2s;
   background-color: #D1D1E4;
   color: #ADB4D2;
 }
-
-.white-btn {
+nav .white-btn {
   background-color: #D1D1E4;
   color: #ADB4D2;
 }
-
-.about-app {
+nav .about-app {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -119,34 +168,31 @@ nav button {
   margin: 120px 0;
   color: #3D4F9F;
 }
-.about-app .app-box {
+nav .about-app .app-box {
   display: grid;
   grid-template-columns: 33% 10px 33% 10px 33% 10px 33%;
   justify-content: space-evenly;
   align-items: center;
   margin: 80px 0;
 }
-.about-app .app-box div {
+nav .about-app .app-box div {
   align-items: center;
   text-align: center;
 }
-
-.buttons {
+nav .buttons {
   display: flex;
   align-items: center;
   margin-top: 40px;
 }
-.buttons p {
+nav .buttons p {
   margin: 0 30px;
   letter-spacing: 5px;
 }
-
-.indicators {
+nav .indicators {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-
-.indicator-first-box {
+nav .indicator-first-box {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -155,28 +201,26 @@ nav button {
   width: 100%;
   color: #fff;
 }
-.indicator-first-box img {
+nav .indicator-first-box img {
   width: 65px;
   height: 66px;
 }
-.indicator-first-box div {
+nav .indicator-first-box div {
   margin: 40px 40px;
 }
-
-.indicator-second-box {
+nav .indicator-second-box {
   background-color: #E9EFFF;
   width: 100%;
   color: #5E80FF;
 }
-.indicator-second-box img {
+nav .indicator-second-box img {
   width: 71px;
   height: 62px;
 }
-.indicator-second-box div {
+nav .indicator-second-box div {
   margin: 40px 40px;
 }
-
-.start {
+nav .start {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,7 +229,7 @@ nav button {
   background-color: #F5F8FF;
   color: #3D4F9F;
 }
-.start .how-start {
+nav .start .how-start {
   display: flex;
   box-sizing: border-box;
   justify-content: center;
@@ -195,28 +239,26 @@ nav button {
   padding: 0 20px;
   height: 400px;
 }
-.start .how-start .how-start-box {
+nav .start .how-start .how-start-box {
   margin-bottom: 29px;
 }
-.start .how-start img {
+nav .start .how-start img {
   width: 460px;
   height: 360px;
 }
-
-.white-button {
+nav .white-button {
   background-color: #fff;
   border: none;
   width: 200px;
   color: #8D96BD;
 }
-.white-button:hover {
+nav .white-button:hover {
   transition: ease-in 0.2s;
   background-color: #D2E1FF;
   cursor: pointer;
   color: #3A79FF;
 }
-
-.get_started {
+nav .get_started {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,12 +268,11 @@ nav button {
   height: 447px;
   color: #fff;
 }
-
-.get_started__buttons {
+nav .get_started__buttons {
   height: 43px;
   margin-top: 50px;
 }
-.get_started__buttons button {
+nav .get_started__buttons button {
   margin: 0 -5px;
   padding: 0;
   width: 155px;
@@ -239,54 +280,48 @@ nav button {
   color: #565F82;
   transition: ease-in 0.2s;
 }
-.get_started__buttons button:hover {
+nav .get_started__buttons button:hover {
   transition: ease-in 0.2s;
   background-color: #5E80FF;
   color: #C7D3FF;
   border: 1px solid rgb(158, 175, 252);
 }
-.get_started__buttons :nth-child(2) {
+nav .get_started__buttons :nth-child(2) {
   transition: ease-in 0.2s;
   background-color: #5E80FF;
   color: #C7D3FF;
   border: 1px solid rgb(158, 175, 252);
 }
-.get_started__buttons :nth-child(2):hover {
+nav .get_started__buttons :nth-child(2):hover {
   background-color: #fff;
   color: #565F82;
   transition: ease-in 0.2s;
 }
-
-.sign-up {
+nav .sign-up {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 330px;
   background-color: #FCFDFF;
 }
-
-.sign-up__box {
+nav .sign-up__box {
   margin: 0 55px;
 }
-
-.sign-up__title {
+nav .sign-up__title {
   font-size: 25px;
   font-weight: 600;
   color: #3D4F9F;
 }
-
-.sign-up__text {
+nav .sign-up__text {
   color: #8D96BD;
 }
-
-.sign-up__send {
+nav .sign-up__send {
   margin: 0 0 0 10px;
   border-radius: 5px;
   background-color: #4D6CE1;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-
-.sign-up__form {
+nav .sign-up__form {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   border: none;
   padding: 0 15px;
@@ -296,69 +331,66 @@ nav button {
   width: 280px;
   height: 40px;
 }
-
-footer {
+nav footer {
   height: 250px;
 }
-
-.footer__rights {
+nav .footer__rights {
   margin: 30px 0 0 190px;
   color: #AEB8D0;
 }
-
 @media (max-width: 450px) {
-  section {
+  nav section {
     min-width: 690px;
   }
-  header {
+  nav header {
     display: none;
   }
-  .productivity img {
+  nav .productivity img {
     width: 690px;
     height: 400px;
   }
-  .sponsors {
+  nav .sponsors {
     justify-content: flex-start;
     height: 60px;
   }
-  .sponsors img {
+  nav .sponsors img {
     margin-left: 10px;
   }
-  .mobileApp {
+  nav .mobileApp {
     width: 620px;
     padding: 30px 0;
     margin-top: 60px;
   }
-  .mobileApp img {
+  nav .mobileApp img {
     width: 100%;
   }
-  .about-app {
+  nav .about-app {
     flex-wrap: wrap;
     margin: 40px 0 40px 0;
     background-size: auto;
   }
-  .about-app .app-box {
+  nav .about-app .app-box {
     flex-wrap: wrap;
     grid-template-columns: 130px 30px 130px 50px 130px 30px 130px;
   }
-  .about-app .app-box .media {
+  nav .about-app .app-box .media {
     margin-left: 20px;
   }
-  .about-app .buttons {
+  nav .about-app .buttons {
     width: 400px;
   }
-  .how-start {
+  nav .how-start {
     height: 600px !important;
     padding-right: 40px !important;
   }
-  footer {
+  nav footer {
     width: 690px;
   }
-  footer nav {
+  nav footer nav {
     display: flex;
     flex-direction: column;
   }
-  .sign-up {
+  nav .sign-up {
     padding-right: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
